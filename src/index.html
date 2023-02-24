@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('html/head.html',{
+    "title":'PRDK Form 1.3'
+    })
+</head>
+<body>
+@@include('html/header.html',{})
+<div id="main" style="outline: 1px dashed #4f4f4f; width: 470px; height: auto; margin: 50px auto">
+
+    <div class="prdk-form">
+
+        <h2>
+            לפרטים ולהרשמה
+            <br/>
+            לתואר ראשון ולתארים מתקדמים
+        </h2>
+
+
+        <form action="assets/files/app.php" id="mainForm" method="post" name='send'>
+            
+            <div class="field animat">
+                <input type="text" name="name" id="name" dir="rtl">
+                <p class="animat-1" dir="rtl">השם שלי:</p>
+            </div>
+
+            <div class="field animat">
+                <input type="text" name="phone" id="phone" dir="rtl">
+                <p class="animat-1" dir="rtl">הנייד שלי:</p>
+            </div>
+
+            <div class="field animat">
+                <input type="text" name="email" id="email" dir="rtl">
+                <p class="animat-1" dir="rtl">האימייל של
+                    י:</p>
+            </div>
+
+            <div class="form-select animat" id="select1">
+                <div class="form-select__input">
+                    <div class="form-select__arrow">
+                        <i class="bi bi-caret-right-fill"></i>
+                    </div>
+                    <div dir="rtl" name="exfield1" type="text" class="form-select__text animat-2" dir="rtl"></div>
+                    <div class="form-select__placeholder" id="label-1" dir="rtl">אני רוצה ללמוד לתואר:</div>
+                </div>
+                <div class="form-select__list" id="select1__list">
+                    <ul class="label-1">
+                        <li data-list="101" dir="rtl">תואר ראשון</li>
+                        <li data-list="102" dir="rtl">תואר שני</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-select animat" id="select2">
+                <div class="form-select__input">
+                    <div class="form-select__arrow">
+                        <i class="bi bi-caret-right-fill"></i>
+                    </div>
+                    <div dir="rtl" name="exfield2" type="text" class="form-select__text animat-2" dir="rtl"></div>
+                    <div class="form-select__placeholder" id="label-2" dir="rtl">התחום שמעניין אותי:</div>
+                </div>
+                <div class="form-select__list" id="select2__list">
+                    <ul id="ul_list_2" class="label-2">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-select animat" id="select3">
+                <div class="form-select__input">
+                    <div class="form-select__arrow">
+                        <i class="bi bi-caret-right-fill"></i>
+                    </div>
+                    <div dir="rtl" name="exfield2" type="text" class="form-select__text animat-2" dir="rtl"></div>
+                    <div class="form-select__placeholder" id="label-3" dir="rtl">התוכנית שמסקרנת אותי:</div>
+                </div>
+                <div class="form-select__list" id="select3__list">
+                    <ul id="ul_list_3" class="label-3">
+
+                    </ul>
+                </div>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox" />
+                <div class="checkbox__text" dir="rtl">
+                    אני מסכימ/ה לקבל מאוניברסיטת תל אביב מידע ועדכונים
+                </div>
+            </label>
+
+
+            <input type="hidden" name="Zip" id="Zip" value="<%=zip%>"/>
+            <input type="hidden" name="afid" id="afid" value="<%=afid%>"/>
+            <input type="hidden" name="exfield1" class="form-select__text-hidden" id="exfield1" value=""/>
+            <input type="hidden" name="exfield2" class="form-select__text-hidden" id="exfield2" value=""/>
+            <input type="hidden" name="exfield3" class="form-select__text-hidden" id="exfield3" value=""/>
+            <input type="hidden" name="freetext" id="checkbox" value="checked">
+
+            <input id="send" type="submit" name="send" value="שליחה"/>
+
+        </form>
+
+        <div id="thisFooterMask"></div>
+
+    </div>
+
+</div>
+<footer>
+    @@include('html/footer.html',{})
+    @@include('html/modal.html',{})
+</footer>
+@@include('html/scripts.html',{})
+
+</body>
+</html>
